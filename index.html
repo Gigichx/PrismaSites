@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prisma Foto — Domenico Bizzoco</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;0,800;1,300;1,400&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="assets/CSS/style.css">
+        <link rel="icon" href="assets/favicon.ico">
+</head>
+
+<body>
+
+    <!-- ====== NAVBAR ====== -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <div class="nav-logo-main">PRISMA <em>Foto</em></div>
+            <div class="nav-logo-sub">di Domenico Bizzoco</div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#categorie">Portfolio</a></li>
+            <li><a href="#servizi">Servizi</a></li>
+            <li><a href="#sala">La Sala</a></li>
+            <li><a href="#studio">Studio</a></li>
+            <li><a href="#dove-siamo">Dove siamo</a></li>
+            <li><a href="#contatti" class="nav-contact">Contatti</a></li>
+        </ul>
+    </nav>
+
+    <!-- ====== HERO CAROUSEL ====== -->
+    <section class="hero" id="home">
+        <div class="carousel-track" id="carousel">
+
+            <div class="carousel-slide active">
+                <div class="slide-ph ph-wedding slide-bg"></div>
+                <div class="slide-overlay"></div>
+                <div class="slide-caption">
+                    <p class="slide-label">Prisma Foto</p>
+                    <h1 class="slide-title">Wedding &<br><em>Cerimonie</em></h1>
+                </div>
+            </div>
+
+            <div class="carousel-slide">
+                <div class="slide-ph ph-bday slide-bg"></div>
+                <div class="slide-overlay"></div>
+                <div class="slide-caption">
+                    <p class="slide-label">Prisma Foto</p>
+                    <h1 class="slide-title">Compleanni &<br><em>18° esimi</em></h1>
+                </div>
+            </div>
+
+            <div class="carousel-slide">
+                <div class="slide-ph ph-riti slide-bg"></div>
+                <div class="slide-overlay"></div>
+                <div class="slide-caption">
+                    <p class="slide-label">Prisma Foto</p>
+                    <h1 class="slide-title">Riti Religiosi &<br><em>Battesimi</em></h1>
+                </div>
+            </div>
+
+            <div class="carousel-slide">
+                <div class="slide-ph ph-shooting slide-bg"></div>
+                <div class="slide-overlay"></div>
+                <div class="slide-caption">
+                    <p class="slide-label">Prisma Foto</p>
+                    <h1 class="slide-title">Shooting &<br><em>Ritratti</em></h1>
+                </div>
+            </div>
+
+            <div class="carousel-slide">
+                <div class="slide-ph ph-ritratti slide-bg"></div>
+                <div class="slide-overlay"></div>
+                <div class="slide-caption">
+                    <p class="slide-label">Prisma Foto</p>
+                    <h1 class="slide-title">Dal battesimo<br><em>al compleanno.</em></h1>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Arrows -->
+        <div class="carousel-arrow arrow-left" onclick="prevSlide()">&#8592;</div>
+        <div class="carousel-arrow arrow-right" onclick="nextSlide()">&#8594;</div>
+
+        <!-- Dots -->
+        <div class="carousel-dots" id="dots">
+            <div class="dot active" onclick="goToSlide(0)"></div>
+            <div class="dot" onclick="goToSlide(1)"></div>
+            <div class="dot" onclick="goToSlide(2)"></div>
+            <div class="dot" onclick="goToSlide(3)"></div>
+            <div class="dot" onclick="goToSlide(4)"></div>
+        </div>
+
+        <div class="scroll-cue">Portfolio</div>
+    </section>
+
+    <!-- ====== CATEGORIE / PORTFOLIO ====== -->
+    <section id="categorie" class="section-wrap categorie-bg">
+        <div class="section-header fade-in">
+            <p class="section-tag">Le nostre categorie</p>
+            <h2 class="section-title">Il nostro <em>portfolio</em></h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <!-- TAB FILTRI -->
+        <div class="cat-tabs fade-in">
+            <button class="cat-btn active" onclick="showCat('wedding',this)">💍 Wedding</button>
+            <button class="cat-btn" onclick="showCat('compleanni',this)">🎂 Compleanni</button>
+            <button class="cat-btn" onclick="showCat('diciotto',this)">🎉 18° esimi</button>
+            <button class="cat-btn" onclick="showCat('riti',this)">🕊️ Riti religiosi</button>
+            <button class="cat-btn" onclick="showCat('shooting',this)">📸 Shooting</button>
+            <button class="cat-btn" onclick="showCat('eventi',this)">🎊 Altri eventi</button>
+            <button class="cat-btn" onclick="showCat('ritratti',this)">🖼️ Ritratti</button>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
+
+            <!-- WEDDING -->
+            <div class="gallery-panel active" id="panel-wedding">
+                <div class="gal-item" onclick="openLightbox('Wedding — Foto 1','c-w1')">
+                    <div class="gal-ph c-w1"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Wedding — Foto 2','c-w2')">
+                    <div class="gal-ph c-w2"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Wedding — Foto 3','c-w3')">
+                    <div class="gal-ph c-w3"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Wedding — Foto 4','c-w4')">
+                    <div class="gal-ph c-w4"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Wedding — Foto 5','c-w5')">
+                    <div class="gal-ph c-w5"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Wedding — Foto 6','c-w6')">
+                    <div class="gal-ph c-w6"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Wedding — Foto 7','c-w7')">
+                    <div class="gal-ph c-w7"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Wedding — Foto 8','c-w8')">
+                    <div class="gal-ph c-w8"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COMPLEANNI -->
+            <div class="gallery-panel" id="panel-compleanni">
+                <div class="gal-item" onclick="openLightbox('Compleanni — Foto 1','c-b1')">
+                    <div class="gal-ph c-b1"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Compleanni — Foto 2','c-b2')">
+                    <div class="gal-ph c-b2"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Compleanni — Foto 3','c-b3')">
+                    <div class="gal-ph c-b3"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Compleanni — Foto 4','c-b4')">
+                    <div class="gal-ph c-b4"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Compleanni — Foto 5','c-b5')">
+                    <div class="gal-ph c-b5"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Compleanni — Foto 6','c-b6')">
+                    <div class="gal-ph c-b6"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Compleanni — Foto 7','c-b7')">
+                    <div class="gal-ph c-b7"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Compleanni — Foto 8','c-b8')">
+                    <div class="gal-ph c-b8"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 18 ESIMI -->
+            <div class="gallery-panel" id="panel-diciotto">
+                <div class="gal-item" onclick="openLightbox('18° esimi — Foto 1','c-18a')">
+                    <div class="gal-ph c-18a"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('18° esimi — Foto 2','c-18b')">
+                    <div class="gal-ph c-18b"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('18° esimi — Foto 3','c-18c')">
+                    <div class="gal-ph c-18c"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('18° esimi — Foto 4','c-18d')">
+                    <div class="gal-ph c-18d"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('18° esimi — Foto 5','c-18e')">
+                    <div class="gal-ph c-18e"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('18° esimi — Foto 6','c-18f')">
+                    <div class="gal-ph c-18f"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('18° esimi — Foto 7','c-18g')">
+                    <div class="gal-ph c-18g"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('18° esimi — Foto 8','c-18h')">
+                    <div class="gal-ph c-18h"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RITI RELIGIOSI -->
+            <div class="gallery-panel" id="panel-riti">
+                <div class="gal-item" onclick="openLightbox('Riti religiosi — Foto 1','c-r1')">
+                    <div class="gal-ph c-r1"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Riti religiosi — Foto 2','c-r2')">
+                    <div class="gal-ph c-r2"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Riti religiosi — Foto 3','c-r3')">
+                    <div class="gal-ph c-r3"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Riti religiosi — Foto 4','c-r4')">
+                    <div class="gal-ph c-r4"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Riti religiosi — Foto 5','c-r5')">
+                    <div class="gal-ph c-r5"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Riti religiosi — Foto 6','c-r6')">
+                    <div class="gal-ph c-r6"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Riti religiosi — Foto 7','c-r7')">
+                    <div class="gal-ph c-r7"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Riti religiosi — Foto 8','c-r8')">
+                    <div class="gal-ph c-r8"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SHOOTING -->
+            <div class="gallery-panel" id="panel-shooting">
+                <div class="gal-item" onclick="openLightbox('Shooting — Foto 1','c-s1')">
+                    <div class="gal-ph c-s1"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Shooting — Foto 2','c-s2')">
+                    <div class="gal-ph c-s2"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Shooting — Foto 3','c-s3')">
+                    <div class="gal-ph c-s3"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Shooting — Foto 4','c-s4')">
+                    <div class="gal-ph c-s4"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Shooting — Foto 5','c-s5')">
+                    <div class="gal-ph c-s5"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Shooting — Foto 6','c-s6')">
+                    <div class="gal-ph c-s6"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Shooting — Foto 7','c-s7')">
+                    <div class="gal-ph c-s7"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Shooting — Foto 8','c-s8')">
+                    <div class="gal-ph c-s8"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ALTRI EVENTI -->
+            <div class="gallery-panel" id="panel-eventi">
+                <div class="gal-item" onclick="openLightbox('Altri eventi — Foto 1','c-e1')">
+                    <div class="gal-ph c-e1"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Altri eventi — Foto 2','c-e2')">
+                    <div class="gal-ph c-e2"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Altri eventi — Foto 3','c-e3')">
+                    <div class="gal-ph c-e3"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Altri eventi — Foto 4','c-e4')">
+                    <div class="gal-ph c-e4"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Altri eventi — Foto 5','c-e5')">
+                    <div class="gal-ph c-e5"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Altri eventi — Foto 6','c-e6')">
+                    <div class="gal-ph c-e6"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Altri eventi — Foto 7','c-e7')">
+                    <div class="gal-ph c-e7"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Altri eventi — Foto 8','c-e8')">
+                    <div class="gal-ph c-e8"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RITRATTI -->
+            <div class="gallery-panel" id="panel-ritratti">
+                <div class="gal-item" onclick="openLightbox('Ritratti — Foto 1','c-p1')">
+                    <div class="gal-ph c-p1"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Ritratti — Foto 2','c-p2')">
+                    <div class="gal-ph c-p2"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Ritratti — Foto 3','c-p3')">
+                    <div class="gal-ph c-p3"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Ritratti — Foto 4','c-p4')">
+                    <div class="gal-ph c-p4"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Ritratti — Foto 5','c-p5')">
+                    <div class="gal-ph c-p5"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Ritratti — Foto 6','c-p6')">
+                    <div class="gal-ph c-p6"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Ritratti — Foto 7','c-p7')">
+                    <div class="gal-ph c-p7"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+                <div class="gal-item" onclick="openLightbox('Ritratti — Foto 8','c-p8')">
+                    <div class="gal-ph c-p8"></div>
+                    <div class="gal-overlay">
+                        <div class="gal-zoom-icon">⊕</div>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /galleryGrid -->
+    </section>
+
+    <!-- ====== SERVIZI ====== -->
+    <section id="servizi" class="section-wrap servizi-bg">
+        <div class="section-header fade-in">
+            <p class="section-tag">Cosa offriamo</p>
+            <h2 class="section-title" style="color:var(--white)">I nostri <em>servizi</em></h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="servizi-grid fade-in">
+            <div class="serv-card">
+                <div class="serv-icon">💍</div>
+                <div class="serv-name">Wedding & Matrimoni</div>
+                <p class="serv-desc">Reportage completo del giorno più importante. Dal preparativi alla festa, ogni
+                    momento catturato con discrezione e passione.</p>
+            </div>
+            <div class="serv-card">
+                <div class="serv-icon">🎂</div>
+                <div class="serv-name">Compleanni & 18° Esimi</div>
+                <p class="serv-desc">Feste di compleanno e diciottesimi memorabili. Catturiamo le risate, le emozioni e
+                    i momenti spontanei della festa.</p>
+            </div>
+            <div class="serv-card">
+                <div class="serv-icon">🕊️</div>
+                <div class="serv-name">Riti Religiosi & Battesimi</div>
+                <p class="serv-desc">Battesimi, cresime, comunioni e prime messe. Ricordi sacri e preziosi per tutta la
+                    famiglia, da conservare per sempre.</p>
+            </div>
+            <div class="serv-card">
+                <div class="serv-icon">📸</div>
+                <div class="serv-name">Shooting Fotografici</div>
+                <p class="serv-desc">Sessioni professionali in studio o in esterna. Per portfolio, social, book
+                    personali o semplicemente per avere belle foto di sé.</p>
+            </div>
+            <div class="serv-card">
+                <div class="serv-icon">🖼️</div>
+                <div class="serv-name">Ritratti & Famiglia</div>
+                <p class="serv-desc">Ritratti individuali, di coppia e di famiglia. Immagini autentiche che raccontano
+                    chi siete, in studio o nei vostri luoghi del cuore.</p>
+            </div>
+            <div class="serv-card">
+                <div class="serv-icon">🎊</div>
+                <div class="serv-name">Altri Eventi</div>
+                <p class="serv-desc">Lauree, anniversari, feste aziendali, saggi e spettacoli. Ogni evento merita di
+                    essere ricordato con immagini di qualità.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== SALA POSA & STAMPA ====== -->
+    <section id="sala" class="sala-section">
+        <div class="sala-inner">
+            <div class="sala-img-wrap">
+                <div class="sala-img"></div>
+                <div class="sala-badge">★ Servizio esclusivo</div>
+            </div>
+            <div class="sala-content fade-in">
+                <p class="sala-eyebrow">Il cuore dello studio</p>
+                <h2 class="sala-title">Sala Posa<br>& <em>Stampa</em></h2>
+                <p class="sala-text">
+                    Il nostro studio dispone di una sala posa professionale completamente attrezzata con fondali
+                    intercambiabili, illuminazione studio di ultima generazione e spazio per riprese individuali, di
+                    coppia e di gruppo.
+                </p>
+                <p class="sala-text">
+                    Offriamo anche un servizio di stampa professionale direttamente in studio: stampe fine art, album
+                    fotografici rilegati, fotolibri personalizzati e stampe su tela o dibond.
+                </p>
+                <ul class="sala-features">
+                    <li>Fondali intercambiabili (bianco, nero, carta, tessuto)</li>
+                    <li>Luci studio Profoto & softbox professionali</li>
+                    <li>Stampa fine art fino a 100×150 cm</li>
+                    <li>Album e fotolibri artigianali su ordinazione</li>
+                    <li>Stampe su tela, forex e dibond</li>
+                    <li>Post-produzione e ritocco professionale inclusi</li>
+                </ul>
+                <a href="#contatti" class="sala-cta">Prenota una sessione</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== LO STUDIO ====== -->
+    <section id="studio" class="section-wrap studio-section">
+        <div class="studio-inner">
+            <div class="studio-img-wrap fade-in">
+                <div class="studio-ph"></div>
+                <div class="studio-img-caption">
+                    <strong>20+</strong>
+                    <span>Anni di esperienza</span>
+                </div>
+            </div>
+            <div class="studio-text fade-in">
+                <p class="studio-tag">Lo studio</p>
+                <h2 class="studio-h">Ogni foto<br>racconta<br><em>la tua storia.</em></h2>
+                <p class="studio-p">
+                    Prisma Foto nasce dalla passione di Domenico Bizzoco per la fotografia e per le persone. Con oltre
+                    vent'anni di esperienza nel settore, lo studio è diventato un punto di riferimento per famiglie,
+                    coppie e professionisti della zona.
+                </p>
+                <p class="studio-p">
+                    Ci occupiamo di ogni evento della vita, dal battesimo al compleanno, con la stessa cura e dedizione.
+                    Perché ogni momento merita di essere ricordato nel modo migliore.
+                </p>
+                <div class="studio-sig">
+                    <div class="studio-sig-avatar"></div>
+                    <div>
+                        <div class="studio-sig-name">Domenico Bizzoco</div>
+                        <div class="studio-sig-role">Fotografo Professionista — Fondatore</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== DOVE SIAMO (MAPS) ====== -->
+    <section id="dove-siamo" class="maps-section">
+        <div class="maps-inner">
+            <div class="maps-info fade-in">
+                <p class="maps-tag">Vieni a trovarci</p>
+                <h2 class="maps-h">Dove<br>siamo</h2>
+
+                <div class="info-row">
+                    <div class="info-icon">📍</div>
+                    <div>
+                        <div class="info-label">Indirizzo</div>
+                        <div class="info-value">Via Esempio 12<br>70100 — Bari (BA)</div>
+                    </div>
+                </div>
+
+                <div class="info-row">
+                    <div class="info-icon">📞</div>
+                    <div>
+                        <div class="info-label">Telefono</div>
+                        <div class="info-value">+39 080 000 0000</div>
+                    </div>
+                </div>
+
+                <div class="info-row">
+                    <div class="info-icon">✉️</div>
+                    <div>
+                        <div class="info-label">Email</div>
+                        <div class="info-value">info@prismafoto.it</div>
+                    </div>
+                </div>
+
+                <div class="info-row">
+                    <div class="info-icon">🕐</div>
+                    <div>
+                        <div class="info-label">Orari</div>
+                        <div class="info-value">Lun – Ven: 9:00 – 19:00<br>Sab: 9:00 – 13:00<br>Dom: su appuntamento
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mappa Google (da sostituire con coordinate reali) -->
+            <div class="maps-frame-wrap">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47968.24!2d16.8!3d41.12!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDA3JzEyLjAiTiAxNsKwNDgnMDAuMCJF!5e0!3m2!1sit!2sit!4v1234567890"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ====== CONTATTI ====== -->
+    <section id="contatti" class="section-wrap contact-section">
+        <div class="section-header fade-in">
+            <p class="section-tag">Parliamoci</p>
+            <h2 class="section-title">Richiedi <em>informazioni</em></h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="contact-inner fade-in">
+            <div class="contact-left">
+                <h3 class="contact-h">Prenota il<br>tuo <em>evento.</em></h3>
+                <p class="contact-sub">
+                    Raccontaci il tuo evento e ti risponderemo entro 24 ore per fissare un incontro gratuito e senza
+                    impegno.
+                </p>
+                <div class="social-links">
+                    <a class="social-link" href="#">📷 Instagram</a>
+                    <a class="social-link" href="#">👍 Facebook</a>
+                </div>
+            </div>
+
+            <form class="contact-form">
+                <div class="form-row">
+                    <div class="f-group">
+                        <label class="f-label">Nome</label>
+                        <input class="f-input" type="text" placeholder="Il tuo nome">
+                    </div>
+                    <div class="f-group">
+                        <label class="f-label">Cognome</label>
+                        <input class="f-input" type="text" placeholder="Il tuo cognome">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="f-group">
+                        <label class="f-label">Telefono</label>
+                        <input class="f-input" type="tel" placeholder="+39 000 000 0000">
+                    </div>
+                    <div class="f-group">
+                        <label class="f-label">Email</label>
+                        <input class="f-input" type="email" placeholder="email@esempio.it">
+                    </div>
+                </div>
+                <div class="f-group">
+                    <label class="f-label">Tipo di evento</label>
+                    <select class="f-select">
+                        <option value="">Seleziona il tipo di evento…</option>
+                        <option>💍 Wedding / Matrimonio</option>
+                        <option>🎂 Compleanno</option>
+                        <option>🎉 18° esimo</option>
+                        <option>🕊️ Rito religioso / Battesimo</option>
+                        <option>📸 Shooting fotografico</option>
+                        <option>🖼️ Ritratto / Famiglia</option>
+                        <option>🎊 Altro evento</option>
+                    </select>
+                </div>
+                <div class="f-group">
+                    <label class="f-label">Data dell'evento (indicativa)</label>
+                    <input class="f-input" type="date">
+                </div>
+                <div class="f-group">
+                    <label class="f-label">Messaggio</label>
+                    <textarea class="f-textarea"
+                        placeholder="Raccontaci il tuo evento, dove si terrà, quante persone saranno…"></textarea>
+                </div>
+                <button type="submit" class="f-submit">Invia la richiesta</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer>
+        <div class="footer-top">
+            <div>
+                <div class="footer-brand-name">PRISMA <em>Foto</em></div>
+                <div class="footer-brand-sub">di Domenico Bizzoco</div>
+                <p class="footer-brand-text">Studio fotografico professionale. Dal battesimo al compleanno, ogni momento
+                    della tua vita merita di essere ricordato.</p>
+            </div>
+            <div>
+                <div class="footer-col-title">Categorie</div>
+                <ul class="footer-col-links">
+                    <li><a href="#categorie">Wedding</a></li>
+                    <li><a href="#categorie">Compleanni</a></li>
+                    <li><a href="#categorie">18° Esimi</a></li>
+                    <li><a href="#categorie">Riti Religiosi</a></li>
+                    <li><a href="#categorie">Shooting</a></li>
+                    <li><a href="#categorie">Ritratti</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="footer-col-title">Studio</div>
+                <ul class="footer-col-links">
+                    <li><a href="#servizi">Servizi</a></li>
+                    <li><a href="#sala">Sala Posa</a></li>
+                    <li><a href="#sala">Stampa Fine Art</a></li>
+                    <li><a href="#studio">Chi siamo</a></li>
+                    <li><a href="#dove-siamo">Dove siamo</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="footer-col-title">Contatti</div>
+                <ul class="footer-col-links">
+                    <li><a href="#">📷 Instagram</a></li>
+                    <li><a href="#">👍 Facebook</a></li>
+                    <li><a href="mailto:info@prismafoto.it">✉️ Email</a></li>
+                    <li><a href="tel:+39080000000">📞 Telefono</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-copy">© 2025 Prisma Foto di Domenico Bizzoco — Tutti i diritti riservati — P.IVA
+                00000000000</div>
+            <div class="footer-social">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ====== LIGHTBOX ====== -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+        <div class="lb-close" onclick="closeLightbox()">✕</div>
+        <div class="lightbox-img-wrap">
+            <div class="lightbox-ph" id="lbPh">
+                <!-- In produzione: <img> reale protetta -->
+            </div>
+            <div class="lb-caption" id="lbCaption"></div>
+        </div>
+    </div>
+
+    <script src="assets/JS/script.js"></script>
+
+</body>
+
+</html>
