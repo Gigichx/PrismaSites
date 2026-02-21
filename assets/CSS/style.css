@@ -9,12 +9,13 @@
 
 :root {
     --bg: #F9F7F4;
-    --ink: #1C1A18;
-    --accent: #B8924A;
-    --accent2: #8A6A30;
-    --light: #EEE9E2;
-    --mid: #7A756E;
-    --line: #DDD8D0;
+    --ink: #1A1218;
+    --accent: #A8205A;
+    --accent2: #C41230;
+    --accent-grad: linear-gradient(135deg, #8B2FC9, #C41230);
+    --light: #F0EBF2;
+    --mid: #7A6E7A;
+    --line: #DDD5DC;
     --white: #FFFFFF;
 }
 
@@ -64,12 +65,14 @@ a {
     letter-spacing: .06em;
     text-transform: uppercase;
     line-height: 1;
+    background: var(--accent-grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .nav-logo-main em {
-    font-style: italic;
-    font-weight: 300;
-    color: var(--accent);
+    font-style: normal;
 }
 
 .nav-logo-sub {
@@ -120,17 +123,16 @@ a {
 
 .nav-contact {
     padding: .5rem 1.4rem;
-    background: var(--ink);
+    background: var(--accent-grad) !important;
     color: var(--white) !important;
     font-size: .58rem !important;
     letter-spacing: .22em !important;
-    font-weight: 400 !important;
-    transition: background .25s !important;
+    font-weight: 700 !important;
+    transition: opacity .25s !important;
 }
 
 .nav-contact:hover {
-    background: var(--accent) !important;
-    color: var(--white) !important;
+    opacity: .85 !important;
 }
 
 .nav-contact::after {
@@ -381,7 +383,7 @@ section {
 .section-divider {
     width: 40px;
     height: 2px;
-    background: var(--accent);
+    background: var(--accent-grad);
     margin: 1.2rem auto 0;
 }
 
@@ -414,9 +416,9 @@ section {
 
 .cat-btn:hover,
 .cat-btn.active {
-    background: var(--ink);
+    background: var(--accent-grad);
     color: var(--white);
-    border-color: var(--ink);
+    border-color: transparent;
 }
 
 /* GALLERY GRID */
@@ -830,7 +832,7 @@ section {
     position: absolute;
     top: 2rem;
     left: 2rem;
-    background: var(--accent);
+    background: linear-gradient(135deg, #8B2FC9, #C41230);
     color: var(--white);
     font-size: .5rem;
     letter-spacing: .3em;
@@ -900,18 +902,18 @@ section {
 .sala-cta {
     display: inline-block;
     padding: .75rem 1.8rem;
-    background: var(--ink);
+    background: linear-gradient(135deg, #8B2FC9, #C41230);
     color: var(--white);
     font-size: .58rem;
     letter-spacing: .25em;
     text-transform: uppercase;
     font-weight: 700;
-    transition: background .25s;
+    transition: opacity .25s;
     align-self: flex-start;
 }
 
 .sala-cta:hover {
-    background: var(--accent);
+    opacity: .85;
 }
 
 /* ====== LO STUDIO ====== */
@@ -942,7 +944,7 @@ section {
     position: absolute;
     bottom: -1rem;
     right: -1rem;
-    background: var(--accent);
+    background: linear-gradient(135deg, #8B2FC9, #C41230);
     color: var(--white);
     padding: 1rem 1.4rem;
 }
@@ -960,7 +962,7 @@ section {
     text-transform: uppercase;
 }
 
-.studio-text {}
+/* .studio-text {} */
 
 .studio-tag {
     font-size: .5rem;
@@ -1068,11 +1070,11 @@ section {
 .info-icon {
     width: 36px;
     height: 36px;
-    background: var(--ink);
+    background: linear-gradient(135deg, #8B2FC9, #C41230);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--accent);
+    color: var(--white);
     font-size: .9rem;
     flex-shrink: 0;
 }
@@ -1144,7 +1146,7 @@ section {
     align-items: start;
 }
 
-.contact-left {}
+/* .contact-left {} */
 
 .contact-h {
     font-size: clamp(1.6rem, 2.5vw, 2.8rem);
@@ -1191,7 +1193,7 @@ section {
     color: var(--accent);
 }
 
-.contact-form {}
+/* .contact-form {} */
 
 .form-row {
     display: grid;
@@ -1247,7 +1249,7 @@ section {
 .f-submit {
     width: 100%;
     padding: .85rem;
-    background: var(--ink);
+    background: linear-gradient(135deg, #8B2FC9, #C41230);
     color: var(--white);
     font-family: 'Montserrat', sans-serif;
     font-size: .58rem;
@@ -1256,12 +1258,12 @@ section {
     font-weight: 700;
     border: none;
     cursor: pointer;
-    transition: background .25s;
+    transition: opacity .25s;
     margin-top: .5rem;
 }
 
 .f-submit:hover {
-    background: var(--accent);
+    opacity: .85;
 }
 
 /* ====== FOOTER ====== */
@@ -1283,15 +1285,16 @@ footer {
     font-size: 1.1rem;
     font-weight: 800;
     text-transform: uppercase;
-    color: var(--white);
     letter-spacing: .06em;
     margin-bottom: .3rem;
+    background: linear-gradient(135deg, #8B2FC9, #C41230);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .footer-brand-name em {
-    font-style: italic;
-    font-weight: 300;
-    color: var(--accent);
+    font-style: normal;
 }
 
 .footer-brand-sub {
@@ -1313,7 +1316,7 @@ footer {
     font-size: .52rem;
     letter-spacing: .3em;
     text-transform: uppercase;
-    color: var(--accent);
+    color: #A8205A;
     font-weight: 700;
     margin-bottom: 1.2rem;
 }
@@ -1333,36 +1336,11 @@ footer {
 }
 
 .footer-col-links a:hover {
-    color: var(--accent);
-}
-
-.footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer-copy {
-    font-size: .52rem;
-    letter-spacing: .12em;
-    color: rgba(255, 255, 255, .2);
-}
-
-.footer-social {
-    display: flex;
-    gap: 1rem;
-}
-
-.footer-social a {
-    font-size: .52rem;
-    letter-spacing: .15em;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, .25);
-    transition: color .2s;
+    color: #C41230;
 }
 
 .footer-social a:hover {
-    color: var(--accent);
+    color: #A8205A;
 }
 
 /* ====== LIGHTBOX ====== */
