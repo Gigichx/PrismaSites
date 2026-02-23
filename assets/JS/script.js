@@ -1,15 +1,3 @@
-new Glide('.glide', {
-    type: 'carousel',
-    perView: 3,
-    focusAt: 'center',
-    gap: 30,
-    peek: { before: 80, after: 80 },
-    breakpoints: {
-        1024: { perView: 2, peek: { before: 50, after: 50 } },
-        600: { perView: 1, peek: { before: 40, after: 40 }, gap: 20 }
-    }
-}).mount();
-
 /* ── CAROUSEL ── */
 let current = 0;
 const slides = document.querySelectorAll('.carousel-slide');
@@ -105,3 +93,12 @@ window.addEventListener('scroll', () => {
         navbar.style.background = 'rgba(15, 10, 10, 0.52)';
     }
 });
+
+/* ── HAMBURGER MENU ── */
+function toggleMenu() {
+    const overlay = document.getElementById('menuOverlay');
+    const hamburger = document.getElementById('hamburger');
+    overlay.classList.toggle('open');
+    hamburger.classList.toggle('open');
+    document.body.style.overflow = overlay.classList.contains('open') ? 'hidden' : '';
+}
