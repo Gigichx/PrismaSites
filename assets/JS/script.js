@@ -83,3 +83,13 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.12 });
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+        navbar.style.background = 'rgba(12, 8, 8, 0.96)';
+    } else {
+        navbar.style.background = 'rgba(15, 10, 10, 0.52)';
+    }
+});
