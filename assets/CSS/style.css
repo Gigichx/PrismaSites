@@ -900,9 +900,22 @@ section {
 .servizi-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: rgba(255, 255, 255, 0.06);
-    overflow: hidden;
+    gap: 1.2rem;
+    align-items: stretch;
+}
+
+.servizi-grid .serv-card:last-child {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem 3rem;
+}
+
+.servizi-grid .serv-card:last-child .serv-icon {
+    font-size: 2rem;
+    height: auto;
+    flex-shrink: 0;
 }
 
 /* Effetto focus: rimpicciolisce e sfoca le card laterali */
@@ -991,14 +1004,16 @@ section {
 }
 
 .serv-card {
-    background: #1A1218;
-    padding: 2.8rem 2.2rem;
-    transition: background .3s;
-    position: relative;
-    overflow: hidden;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    padding: 2.5rem 2rem;
     display: flex;
     flex-direction: column;
     gap: .8rem;
+    transition: transform .3s ease, background .3s, border-color .3s, box-shadow .3s;
+    position: relative;
+    overflow: hidden;
 }
 
 .serv-card::before {
@@ -1758,6 +1773,11 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .servizi-grid .serv-card:last-child {
+        grid-column: 1 / -1;
+        flex-direction: row;
+    }
+
     .sala-inner,
     .studio-inner,
     .contact-inner,
@@ -1818,6 +1838,13 @@ footer {
 
     .servizi-grid {
         grid-template-columns: 1fr;
+    }
+
+    .servizi-grid .serv-card:last-child {
+        grid-column: 1;
+        flex-direction: column;
+        padding: 2.5rem 2rem;
+        gap: .8rem;
     }
 
     .cat-tabs {
